@@ -1,3 +1,9 @@
+/* Project: Lab2
+* Class: UniqueWords.java
+* Author: Gianna Sheppard 
+* Date: February 25, 2025
+* This program counts the distinct words in an ArrayList, and prints them out as unique words. 
+*/
 import java.util.ArrayList;
 
 public class UniqueWords
@@ -11,15 +17,32 @@ public class UniqueWords
    {
 	  int count = 0;
 	  
+	  
       for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
-      }
+      {
+    	String word = list.get(i);
+    	boolean isDuplicate = false;
+    	
+    	
+    	for (int j = 0; j < i; j++)
+    	  {
+    		  if (list.get(j).equals(word)) 
+    		  {
+                isDuplicate = true;
+                  break;
+    		  }
+    	  }
+    	  
+          if(!isDuplicate)
+    	{
+    		  count++;
+    	   
+        }
+    }
 	  return count;
    }
-
+   
+ 
    public static void main(String[] args)
    {
       ArrayList <String> words = new ArrayList<>();
